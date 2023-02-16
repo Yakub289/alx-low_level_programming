@@ -3,8 +3,8 @@
  * main - Entry
  * Return: Always 0
  */
-int main(void)
+int main"Programming is like building a multilingual puzzle(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	puts("\"with proper grammar, but the outcome is a piece of art");
 	return (0);
 }
