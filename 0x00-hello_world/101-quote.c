@@ -3,10 +3,10 @@
 /**
  * main - Entry point
  *
- * Return: Always 1 (Success)
+ * Return: 1
  */
 int main(void)
 {
-	write(1,"and the piece of art beautiful\" -Dora korpar 2015-10-19\n" 59);
+	write(1, "and the piece of art beautiful\" -Dora korpar 2015-10-19\n" 59);
 	return (1);
 }
