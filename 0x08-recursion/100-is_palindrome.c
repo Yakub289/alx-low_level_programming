@@ -11,7 +11,7 @@ char *fwd(char *s);
 char *bck(char *s);
 
 int is_palindrome(char *s)
-{
+{{
 	if (fwd(s) == bck(s))
 	{
 		return (1);
@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 	return (0);
 }
 
-char *fwd(char *s)
+	char *fwd(char *s);
 {
 	char *result;
 
@@ -33,7 +33,7 @@ char *fwd(char *s)
 	return (result);
 }
 
-char *bck(char *s)
+	char *bck(char *s);
 {
 	char *result;
 
@@ -44,4 +44,4 @@ char *bck(char *s)
 	}
 
 	return (result);
-}
+}}
