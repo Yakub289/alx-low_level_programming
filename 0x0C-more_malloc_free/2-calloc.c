@@ -4,27 +4,32 @@
 #include <string.h>
 
 /**
- * *_calloc - allocate memory and initialize values to 0
- * @nmemb: number of elements of size (size) to be allocated
- * @size: size of individual elements
- * Return: pointer to allocated memory or NULL on failure
+ * _calloc - Allocates memory for an array of a certain number
+ *           of elements each of an inputted byte size.
+ * @nmemb: The number of elements.
+ * @size: The byte size of each array element.
+ * Return: If nmemb = 0, size = 0, or the function fails - NULL.
+ *         Otherwise - a pointer to the allocated memory.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	char *ptr;
+	void *mem;
+	char *filler;
+	unsigned int index;
 
 	if (nmemb == 0 || size == 0)
-		exit((long int)NULL);
-
-	ptr = malloc(size * nmemb);
-
-	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
-		ptr[i] = 0;
+	mem = malloc(size * nmemb);
 
-	return (ptr);
+	if (mem == NULL)
+		return (NULL);
+
+	filler = mem;
+
+	for (index = 0; index < (size * nmemb); index++)
+		filler[index] = '\0';
+
+	return (mem);
 }
