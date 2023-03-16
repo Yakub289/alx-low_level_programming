@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * _calloc - Allocate memory and initialize values to 0.
+ * _calloc - Allocate memory and initialize values to 0
  * @nmemb: number of elements of size (size) to be allocated.
  * @size: size of individual elements.
  * Return: Pointer to allocated memory or NULL on failure.
