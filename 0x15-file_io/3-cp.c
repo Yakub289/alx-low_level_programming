@@ -51,7 +51,7 @@ void close_file(int fd)
  * Return: Always 0 (success), or else
  * exit code 97 if the argument count is incorrect,
  * exit code 98 if file_from does not exist or cannot be read,
- * exit code 97 if file_to cannot be created or cannot write to file,
+ * exit code 99 if file_to cannot be created or cannot write to file,
  * exit code 100 if file_to or file_from cannot be closed.
  */
 
