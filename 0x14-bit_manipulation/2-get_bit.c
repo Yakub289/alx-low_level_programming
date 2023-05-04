@@ -5,17 +5,20 @@
 #include <string.h>
 
 /**
- * get_endianness - Write a function that checks the endianness.
- * Return: 0 if big endian, 1 if little endian.
+ * get_bit - Write a function that returns a bit value in at a given index.
+ * @n: the size of bit value at the index.
+ * @index: is the starting point by 0 in bit size.
+ * Return: The value of bit at index (success), or else
+ * -1 if error occurs.
  */
 
-int get_endianness(void)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	int num = 1;
-	char *endianness = (char *)&num;
+	if (index >= (sizeof(unsigned long int) * 8))
+		return (-1);
 
-	if (*endianness == 1)
-		return (1);
+	if ((n & (1 << index)) == 0)
+		return (0);
 
-	return (0);
+	return (1);
 }
