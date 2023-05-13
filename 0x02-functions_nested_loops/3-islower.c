@@ -8,22 +8,5 @@
 
 int _islower(int c)
 {
-	int lowercase = 'a';
-
-	while (lowercase <= 'z' || lowercase <= 'Z')
-	{
-		if (lowercase < 'z')
-		{
-			_putchar(lowercase);
-			lowercase++;
-
-			return (1);
-		}
-
-		else
-		{
-			return (0);
-		}
-	}
-
+	return (c >= 'a' && c <= 'z');
 }
