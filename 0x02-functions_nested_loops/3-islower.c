@@ -8,7 +8,7 @@
 
 int _islower(int c)
 {
-	char lowercase = 'a';
+	int lowercase = 'a';
 
 	while (lowercase <= 'z' || lowercase <= 'Z')
 	{
