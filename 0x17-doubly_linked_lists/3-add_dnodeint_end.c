@@ -5,6 +5,7 @@
 /**
  * add_dnodeint_end - A function that adds a new node at end of a linked list.
  * @head: head of the linked list.
+ * @n: value for integer element in the node.
  * Return: the address of the new element, or
  * NULL if it failed.
  */
