@@ -1,7 +1,7 @@
-#define _LIST_H_
-#ifndef _LIST_H_
+#ifndef _LISTS_H_
+#define _LISTS_H_
 
-#include <stido.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <stddef.h>
 #include <stdlib.h>
