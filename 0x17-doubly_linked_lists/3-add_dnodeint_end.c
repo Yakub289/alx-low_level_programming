@@ -3,20 +3,34 @@
 #include <unistd.h>
 
 /**
- * free_dlistint - A function that adds a new node at the end of a linked list.
+ * add_dnodeint_end - A function that adds a new node at end of a linked list.
  * @head: head of the linked list.
  * Return: the address of the new element, or
  * NULL if it failed.
  */
 
-void free_dlistint(dlistint_t *head)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *tmp;
+	dlistint_t *tmp = malloc(sizeof(dlistint_t));
+	dlistint_t *end = *head;
 
-	while (head != NULL)
+	if (tmp  == NULL)
+		return (NULL);
+
+	tmp->n = n;
+	tmp->prev = NULL;
+	tmp->next = NULL;
+
+	if (*head == NULL)
 	{
-		tmp  = head->next;
-		free(head);
-		head = tmp;
+		*head = tmp;
+		return (tmp);
 	}
+
+	while (end->next != NULL)
+		end = end->next;
+	end->next = tmp;
+	tmp->prev = end;
+
+	return (tmp);
 }
