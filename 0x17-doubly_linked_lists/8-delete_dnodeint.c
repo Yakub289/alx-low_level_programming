@@ -1,6 +1,8 @@
 #include "lists.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * delete_dnodeint_at_index - delete node of doubly linked list at index.
