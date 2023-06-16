@@ -13,42 +13,30 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
-	unsigned int node_index;
+	unsigned int peach = 0;
+	dlistint_t *list = *head, *deck = NULL;
 
-	if (*head == NULL)
+	if (head == NULL || list == NULL)
 		return (-1);
-
-	temp = *head;
-	node_index = 0;
-
-	while (temp != NULL)
+	if (index == 0)
 	{
-		if (index == node_index)
-		{
-			if (index > 0 && temp->next  == NULL)
-			{
-				temp->prev->next = NULL;
-			}
-			else if (index > 0)
-			{
-				temp->next->prev = temp->prev;
-				temp->prev->next = temp->next;
-			}
-			else if (index == 0)
-			{
-				if (temp->next != NULL)
-					temp->next->prev = NULL;
-				*head = temp->next;
-			}
-
-			free(temp);
-			break;
-		}
-		node_index += 1;
-		if (temp->next != NULL)
-			temp = temp->next;
+		if (list->next != NULL)
+			list->next->prev = NULL;
+		*head = list->next;
+		free(list);
+		return (1);
 	}
-
+	while (peach != index && list != NULL)
+	{
+		deck = list;
+		list = list->next;
+		peach++;
+	}
+	if (list == NULL)
+		return (-1);
+	deck->next = list->next;
+	if (list->next != NULL)
+		list->next->prev = deck;
+	free(list);
 	return (1);
 }
