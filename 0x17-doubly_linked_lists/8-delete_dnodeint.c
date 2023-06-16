@@ -43,8 +43,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			}
 
 			free(temp);
+			break;
 		}
-
 		node_index += 1;
 		if (temp->next != NULL)
 			temp = temp->next;
