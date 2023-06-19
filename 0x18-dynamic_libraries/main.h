@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <string.h>
-#include <limit.h>
+#include <limits.h>
 
 int _putchar(char c);
 int _islower(int c);
