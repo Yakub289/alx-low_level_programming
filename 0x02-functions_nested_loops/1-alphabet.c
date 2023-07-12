@@ -7,12 +7,12 @@
 
 void print_alphabet(void)
 {
-	char c = 'a';
+	char lowercase = 'a';
 
-	while (c <= 'z')
+	while (lowercase <= 'z')
 	{
-		_putchar(c);
-		c++;
+		_putchar(lowercase);
+		lowercase++;
 	}
 	_putchar('\n');
 }
