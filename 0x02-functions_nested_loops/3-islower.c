@@ -8,5 +8,15 @@
 
 int _islower(int c)
 {
-	return (c >= 'a' && c <= 'z');
+	char first_character = 'a';
+	char last_character = 'z';
+
+	if ( c >= first_character && c <= last_character)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
