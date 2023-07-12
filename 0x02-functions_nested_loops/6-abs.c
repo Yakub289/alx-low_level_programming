@@ -8,24 +8,14 @@
 
 int _abs(int n)
 {
-	int positive_number = 1;
-	int negative_number = -1;
-	int zero = 0;
+	int number = 0;
 
-	if (n > positive_number)
+	if (n >= number)
 	{
-		return (1);
-	}
-	else if (n < negative_number)
-	{
-		return (-1);
-	}
-	else if (n == zero)
-	{
-		return (0);
+		return (n);
 	}
 	else
 	{
-		return (n);
+		return (-n);
 	}
 }
