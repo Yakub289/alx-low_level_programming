@@ -13,7 +13,7 @@ void jack_bauer(void)
 	{
 		int seconds = 0;
 
-		while (seconds = 60)
+		while (seconds < 60)
 		{
 			printf("%02d", hours);
 			printf(":");
