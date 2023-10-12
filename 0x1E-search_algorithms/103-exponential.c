@@ -10,7 +10,7 @@
  * b_search - A function that searches for a value in a sorted
  * array of integers using the Binary search algorithm
  * @array: Array is a pointer to the first element of the array to search in
- * low: Left index in the array
+ * @low: Left index in the array
  * @high: right index in the array
  * @value: Value to search for in the array
  * Return: first index is valued is located or else
